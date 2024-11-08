@@ -57,5 +57,83 @@ header {
     }
 }
 
+main {
+    section.background-img {
+        // 設定背景圖片
+        min-height: 70vh;
+        background-image: url(../images/日本櫻花.jpg);
+        background-size: cover;
+        background-position: center;
+        transition: all 0.2s ease-in;
+        position: relative;
+        z-index: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        div.filter {
+            background-color: rgba(0,0,0,0.5);
+            width: 100%;
+            min-height: 70vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        h3 {
+            font-size: 3rem;
+            color: white;
+            text-align: center;
+        }
+    }
+
+    section.info-circles {
+        background-color: white;
+        padding: 2rem 1rem;
+        // border: 3px solid red;
+
+        h3 {
+            text-align: center;
+            font-size: 2.5rem;
+        }
+        div.circles { 
+            // border: 2px solid blue;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            div.circle {
+                padding: 1rem;
+                // border: 3px solid red;
+                // 每個circle預設250px
+                // grow = 0，代表視窗>1000時也不會分配空間給circle
+                flex: 0 1 250px;
+                // text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                img {
+                    width: 80%;
+                    border-radius: 50%;
+                    transition: all 0.3s ease-in;
+                    padding: 0.3rem;
+                    &:hover {
+                        border: 5px solid $themeColor;
+                    }
+                }
+
+                p {
+                    text-align: center;
+                    padding: 0.5rem;
+                }
+            }
+        }
+    }
+}
+
+
+
 
 
